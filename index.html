@@ -1,14 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Psicóloga Julia Malta</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psicóloga Julia Malta</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Bem-vinda(o) ao site da Psicóloga Julia Malta</h1>
 
-    <p>Este é um site em construção usando GitHub Pages.</p>
+  <!-- Bloco 1: Apresentação -->
+<header>
+  <div class="header-content">
+    <img src="images/julia.png" alt="Foto da Psicóloga Julia Malta" class="profile-img" />
+    <h1>Julia Malta</h1>
+    <p class="crp">Psicóloga - CRP 04/66828</p>
+    <p class="frase-impacto">Enxergo você, para que você se enxergue também!</p>
+  </div>
+</header>
 
-    <img src="images/julia.jpg" alt="Foto da Julia" width="300">
+<section class="sobre">
+  <div class="container">
+    <h2>Entre em contato</h2>
+    <p>Atendimentos online,  oferecendo um espaço seguro para você se expressar e se compreender melhor.</p>
+    <a href="https://wa.me/5534991563738?text=Olá%2C+gostaria+de+saber+mais+sobre+os+atendimentos+com+a+Julia+Malta" class="botao-whatsapp" target="_blank"><img src="images/whats.png" alt="WhatsApp" class="icon-whats" />Agendar pelo WhatsApp</a>
+  </div>
+</section>
+
+<section class="texto-terapia">
+  <div class="container">
+    <h2>É tempo de terapia</h2>
+    <p>Eu sei. iniciar a terapia pode não ser uma tarefa tão simples quanto parece, afinal, você não estará "de frente" comigo, mas consigo mesmo...</p>
+
+    <p>Ainda assim é fundamental compreender como a psicoterapia se baseia em um processo que se dará aos poucos, com constância, disposição e engajamento!</p>
+
+    <p>Ela também não vem como "solução infalível para todos os megas problemas da vida" mas poderá melhorar seu bem-estar, qualidade de vida, habilidades para lidar com as próprias emoções e sentimentos...</p>
+
+    <p>E sim. Poderá ser desconfortável você se perceber e se ver, mas você também perceberá o quanto será recompensador!</p>
+
+    <p>Se fez sentido, se você se identificou, te digo: <strong>é tempo de terapia meus queridos!</strong></p>
+
+  </div>
+</section>
+
+
+<!-- Bloco 3: Depoimentos -->
+<section class="depoimentos">
+  <h2>Depoimentos</h2>
+  <div class="carrossel-wrapper">
+    <div class="carrossel-linha" id="carrossel-linha">
+      <div class="depoimento">
+        <img src="images/pessoa1.png" alt="Depoente 1" />
+        <div class="texto">
+          <p>“Julia tem uma escuta acolhedora e envolvente.”</p>
+          <p class="nome">– Juliana</p>
+        </div>
+      </div>
+      <div class="depoimento">
+        <img src="images/pessoa2.png" alt="Depoente 2" />
+        <div class="texto">
+          <p>“Me ajudou a superar coisas que eu nunca pensei ser possível.”</p>
+          <p class="nome">– Maria Paula</p>
+        </div>
+      </div>
+      <div class="depoimento">
+        <img src="images/pessoa3.png" alt="Depoente 3" />
+        <div class="texto">
+          <p>“Me acolheu no tempo mais conturbado da minha vida e me ajudou a organizar meus pensamentos.”</p>
+          <p class="nome">– Mariah</p>
+        </div>
+      </div>
+
+      <!-- Repete para efeito infinito -->
+      <div class="depoimento">
+        <img src="images/pessoa1.png" alt="Depoente 1" />
+        <div class="texto">
+          <p>“Julia tem uma escuta acolhedora e envolvente.”</p>
+          <p class="nome">– Juliana</p>
+        </div>
+      </div>
+      <div class="depoimento">
+        <img src="images/pessoa2.jpg" alt="Depoente 2" />
+        <div class="texto">
+          <p>“Me ajudou a superar coisas que eu nunca pensei ser possível.”</p>
+          <p class="nome">– Luca</p>
+        </div>
+      </div>
+      <div class="depoimento">
+        <img src="images/pessoa3.png" alt="Depoente 3" />
+        <div class="texto">
+          <p>“Me acolheu no tempo mais conturbado da minha vida e me ajudou a organizar meus pensamentos.”</p>
+          <p class="nome">– Mariah</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="secao-tcc">
+  <div class="container">
+    <button class="accordion">
+  <img src="images/cerebro.png" alt="Ícone explicativo" class="icone-titulo" />
+  O que é TCC?
+  <span class="seta">&#x25BC;</span> <!-- seta para baixo -->
+</button>
+    <div class="panel">
+      <p>A Terapia Cognitivo-Comportamental (TCC) é uma abordagem da psicologia focada em como nossos pensamentos influenciam nossas emoções e comportamentos.</p>
+      <p>Ela ajuda a identificar padrões de pensamento que causam sofrimento ou dificultam o dia a dia.</p>
+      <p>Com técnicas práticas e conversas guiadas, a pessoa aprende a modificar esses padrões para lidar melhor com seus desafios.</p>
+      <p>É uma terapia estruturada, com começo, meio e fim, baseada em evidências científicas e focada no presente.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Bloco 4: Footer -->
+  <footer>
+    © 2025 Psicóloga Julia Malta · CRP 04/66828
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const panel = btn.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+
 </body>
 </html>
